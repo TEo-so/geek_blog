@@ -1,12 +1,14 @@
 <template>
     <header>
         <h1 class="title">GEEK-BLOG</h1>
+        <router-link to="/login">
         <div 
         class ="login"
         >
             <span class="el-icon-user-solid"></span>
             <span>登录|注册</span>
         </div>
+       </router-link>
     </header>
 </template>
 

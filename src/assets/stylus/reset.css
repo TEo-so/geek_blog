@@ -47,3 +47,12 @@ body{
 	font-size: 62.5%;
     background-color:#F4F5F5
 }
+
+a {
+	text-decoration: none;
+	color: #ffffff
+}
+
+.router-link-active {
+    text-decoration: none;
+}

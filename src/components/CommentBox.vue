@@ -3,63 +3,87 @@
     <div class="title">评论</div>
 
     <div class="commentBox">
-      <div class="commentator">
+      <div class="content">
         <img src="../assets/images/background.jpg" />
-        <span class="name">Vue</span>
-
-        <el-dropdown class="more">
-          <span class="el-dropdown-link">
-            更多
-            <i class="el-icon-arrow-down el-icon--right"></i>
-          </span>
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>删除评论</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
+        <textarea></textarea>
       </div>
 
-      <div class="content">评论内容</div>
+      <div class="publish">
+        <span class="el-icon-picture-outline"></span>
+        <el-button size="mini" round class="button">发布</el-button>
+      </div>
+    </div>
+
+    <div class="otherComments" 
+   >
+      <img />
+      <p></p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+ 
+  
+};
 </script>
 
 <style lang="scss" scoped>
 .commentList {
-  width: 50vw;
+  width: 55vw;
   height: 60vh;
   background: #ffffff;
   margin: 10vh auto;
   border: 1px solid #f6f6f6;
   .title {
-    width: 100%;
     height: 5vh;
     background-color: #f6f6f6;
+    line-height: 5vh;
+    padding-left: 10px;
+    font-size: 0.8rem;
   }
   .commentBox {
-    width: 100%;
     padding: 10px;
     border-bottom: 1px solid #f6f6f6;
   }
 
-  .commentator {
+  .content {
     display: flex;
     margin-bottom: 10px;
     align-items: center;
+    textarea {
+      width: 38vw;
+      height: 20px;
+      outline: none;
+    }
 
     img {
-      width: 40px;
-      height: 40px;
+      width: 25px;
+      height: 25px;
       margin-right: 15px;
     }
-    .more {
-      margin-left: 35vw;
-      cursor: pointer;
-      color: #409eff;
+  }
+  .publish {
+    display: flex;
+    margin-left: 35px;
+    .el-icon-picture-outline {
+      font-size: 21px;
+      margin-right: 30vw;
     }
+  }
+}
+.otherComments {
+  display: flex;
+  margin: 10px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+  }
+  p {
+    display: flex;
+    align-items: center;
   }
 }
 </style>

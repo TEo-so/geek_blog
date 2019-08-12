@@ -8,8 +8,10 @@
       </div>
       <div class="content">
         <ul>
-          <li>
-            <span>VUE</span>
+          <li  
+          v-for = "(item) in tagList"
+          :key = item.id>
+            <span>{{item.name}}</span>
           </li>
         </ul>
       </div>
@@ -19,7 +21,13 @@
 
 <script>
 export default {
-  name: "ArticlesTag"
+  name: "ArticlesTag",
+  props:{
+     tagList:{
+       type:Array,
+       require:true
+     }
+  }
 };
 </script>
 
@@ -28,9 +36,10 @@ export default {
   width: 20vw;
   background: #ffffff;
   padding: 10px;
-  position: relative;
+  position: fixed;
   left: 70vw;
-  bottom: 10vh;
+  top:50vh;
+  cursor: pointer;
   .top {
     padding-bottom: 10px;
     border-bottom: 2px solid #f6f6f6;
@@ -38,6 +47,18 @@ export default {
   .content {
     display: flex;
     align-items: center;
+    ul{
+      display:flex;
+      width: 15vw;
+      flex-wrap:wrap;
+      li{
+        background:#F4F5F5;
+        margin: 5px;
+        padding:3px;
+        border-radius: 5px
+
+      }
+    }
   }
 }
 </style>

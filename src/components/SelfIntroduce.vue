@@ -29,9 +29,9 @@ export default {
   width: 20vw;
   background: #ffffff;
   padding: 10px;
-  position: relative;
+  position: fixed;
   left: 70vw;
-  bottom: 19vh;
+  top:21vh;
 }
 img {
   width: 40px;
