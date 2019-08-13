@@ -3,6 +3,7 @@ const tag  = require('./tag.json')
 const comment = require('./comment.json')
 const login = require('./login.json')
 const test  = require('./test.json')
+const articleByTag = require('./articleByTag.json')
  
 module.exports = {
   port: 8080,
@@ -22,6 +23,10 @@ module.exports = {
     //login
     app.get('/api/login', (req, res) => {
       res.json(login)
+    })
+    //articleByTag
+    app.get('/api/articleByTag/*',(req,res) =>{
+      res.json(articleByTag)
     })
     //test
     app.get('/api/test', (req, res) => {

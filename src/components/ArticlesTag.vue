@@ -11,7 +11,8 @@
           <li  
           v-for = "(item) in tagList"
           :key = item.id>
-            <span>{{item.name}}</span>
+            <span
+            @click = "getArticleByTag(item.id)">{{item.name}}</span>
           </li>
         </ul>
       </div>
@@ -20,6 +21,10 @@
 </template>
 
 <script>
+import { FETCH_ARTCLE_BY_TAG } from '../store/type/actions';
+
+
+
 export default {
   name: "ArticlesTag",
   props:{
@@ -27,6 +32,12 @@ export default {
        type:Array,
        require:true
      }
+  },
+  methods:{
+    getArticleByTag(id){
+       this.$router.push({ name: 'articleByTag', query: {tagId:id}})
+       this.$store.dispatch(FETCH_ARTCLE_BY_TAG,this.$route.query.tagId)
+    }
   }
 };
 </script>

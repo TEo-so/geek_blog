@@ -1,6 +1,6 @@
 <template>
   <div class="articleList">
-    <div class="article" ref="article" v-for="(item) in articleList" :key="item.id">
+    <div class="article" v-for="(item) in articleList" :key="item.id">
 
       <div class="top">
 
@@ -9,7 +9,7 @@
 
         <el-dropdown>
           <span class="el-dropdown-link">
-            <i class="el-icon-arrow-down el-icon--right"></i>更多
+            <i class="el-icon-arrow-down el-icon--right"></i>标签文章
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>删除文章</el-dropdown-item>
@@ -35,25 +35,17 @@
 
 
 <script>
-import { mapGetters } from "vuex";
 
 export default {
-  name: "ArticlesList",
-
-  props: {
-    articleList: {
-      type: Array,
-      required: true
+  name: "ArticlesByTag",
+  computed:{
+    articleList(){
+        return this.$store.getters.articleByTag
     }
-  },
-
   
-  methods:{
-    toDetail(id){
-      this.$router.push({ name: 'article', query: {articleId:id}})
-    }
   }
-};
+  
+}
 </script>
 
 

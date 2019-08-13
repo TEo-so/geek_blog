@@ -49,6 +49,9 @@ export const ArticleService = {
   },
   getDetail (articleId) {
     return ApiService.get(`comment/${articleId}`)
+  },
+  tag (tagId) {
+    return ApiService.get(`articleByTag/${tagId}`)
   }
 
  

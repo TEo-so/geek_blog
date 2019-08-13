@@ -1,7 +1,7 @@
 <template>
   <div>
     <VHeader/>
-    <ArticlesList 
+    <router-view 
     :articleList = "articleList"/>
     <selfIntroduce />
     <ArticlesTag
@@ -14,14 +14,14 @@
 
 import { mapGetters } from 'vuex'
 import { FETCH_ARTICLE, FETCH_TAG } from '@/store/type/actions'
-import VHeader from '@/components/VHeader'
-import ArticlesList from "@/components/ArticlesList";
+
 import ArticlesTag from "@/components/ArticlesTag";
 import selfIntroduce from "@/components/SelfIntroduce";
 import EditButton from "@/components/EditButton";
+import VHeader from '@/components/VHeader'
 export default {
   components: {
-    ArticlesList,
+
     ArticlesTag,
     selfIntroduce,
     EditButton,
