@@ -30,7 +30,7 @@ export default {
   },
   created(){
      this.$store.dispatch(FETCH_ARTICLE_DETAIL,this.$route.query.articleId)
-     console.log(this.articleDetail)
+
    },
     computed:{
       ...mapGetters(['comment'])
@@ -45,7 +45,7 @@ export default {
 .article {
   width: 55vw;
   background: #ffffff;
-  margin-left: 10vw;
+  margin-left: 20vw;
   position: relative;
   top: 10vh;
   padding: 3vw;

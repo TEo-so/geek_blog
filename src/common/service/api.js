@@ -52,6 +52,10 @@ export const ArticleService = {
   },
   tag (tagId) {
     return ApiService.get(`articleByTag/${tagId}`)
+  },
+  delete(articleId){
+    
+     return ApiService.delete(`article`,articleId)
   }
 
  

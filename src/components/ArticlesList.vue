@@ -1,28 +1,14 @@
 <template>
   <div class="articleList">
     <div class="article" ref="article" v-for="(item) in articleList" :key="item.id">
-
       <div class="top">
-
         <h4 class="title">{{item.title}}</h4>
-    
 
-        <el-dropdown>
-          <span class="el-dropdown-link">
-            <i class="el-icon-arrow-down el-icon--right"></i>更多
-          </span>
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>删除文章</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
+        <div class="delete"
+        @click = "deleteArticle(item.id)">删除</div>
       </div>
 
-     
-      <div 
-      class="content"
-      @click = "toDetail(item.id)"
-      >{{item.content}}</div>
-     
+      <div class="content" @click="toDetail(item.id)">{{item.content}}</div>
 
       <div class="end">
         <span class="tag">{{item.tag}}</span>
@@ -35,8 +21,7 @@
 
 
 <script>
-import { mapGetters } from "vuex";
-
+import { FETCH_DELETE_ARTICLE } from '@/store/type/actions'
 export default {
   name: "ArticlesList",
 
@@ -47,10 +32,13 @@ export default {
     }
   },
 
-  
-  methods:{
-    toDetail(id){
-      this.$router.push({ name: 'article', query: {articleId:id}})
+  methods: {
+    toDetail(id) {
+      this.$router.push({ name: "article", query: { articleId: id } });
+    },
+    deleteArticle(id) {
+      console.log(id)
+      this.$store.dispatch(FETCH_DELETE_ARTICLE,id)
     }
   }
 };
@@ -74,7 +62,7 @@ export default {
       font-size: 1.2rem;
       font-weight: bold;
       align-items: center;
-      .el-dropdown {
+      .delete {
         margin-left: 38vw;
         cursor: pointer;
         color: #409eff;

@@ -5,6 +5,7 @@ import Login from '@/components/Login.vue'
 import ArticleDetail from '@/components/ArticleDetail.vue'
 import ArticlesList from '@/components/ArticlesList'
 import ArticlesListByTag from '@/components/ArticlesListByTag'
+import EditArticle from '@/views/EditArticle'
 
 
 Vue.use(Router)
@@ -37,6 +38,11 @@ export default new Router({
             name: "article",
             component:ArticleDetail
         },
+        {
+            path:'/editArticle',
+            name:'editArticle',
+            component:EditArticle
+        }
     
     ]
 })
