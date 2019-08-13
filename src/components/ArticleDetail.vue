@@ -8,19 +8,17 @@
     </div>
 
     <div class="content"></div>
-    <CommentBox :comment = "comment"/>
-
+    <CommentBox :comment="comment" />
   </div>
 </template>
 
 
 <script>
-import Author from "@/components/Author"
-import More from "@/components/More"
-import CommentBox from '@/components/CommentBox'
-import {FETCH_ARTICLE_DETAIL} from '@/store/type/actions'
-import { mapGetters } from 'vuex'
-
+import Author from "@/components/Author";
+import More from "@/components/More";
+import CommentBox from "@/components/CommentBox";
+import { FETCH_ARTICLE_DETAIL } from "@/store/type/actions";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -28,15 +26,12 @@ export default {
     More,
     CommentBox
   },
-  created(){
-     this.$store.dispatch(FETCH_ARTICLE_DETAIL,this.$route.query.articleId)
-
-   },
-    computed:{
-      ...mapGetters(['comment'])
+  created() {
+    this.$store.dispatch(FETCH_ARTICLE_DETAIL, this.$route.query.articleId);
+  },
+  computed: {
+    ...mapGetters(["comment"])
   }
-
-
 };
 </script>
 

@@ -43,6 +43,12 @@ export default {
         return this.$store.getters.articleByTag
     }
   
+  },
+  methods: {
+    toDetail(id) {
+      this.$router.push({ name: "article", query: { articleId: id } });
+    },
+    
   }
   
 }

@@ -37,7 +37,6 @@ export default {
       this.$router.push({ name: "article", query: { articleId: id } });
     },
     deleteArticle(id) {
-      console.log(id)
       this.$store.dispatch(FETCH_DELETE_ARTICLE,id)
     }
   }
