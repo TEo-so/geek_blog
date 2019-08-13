@@ -1,6 +1,15 @@
 <template>
   <div class="commentList">
     <div class="title">评论</div>
+          
+    <ul>
+       <li v-for  = "(item) in comment.content"
+       :key = "item.id">
+         <img :src = "item.avator">
+         <p>{{item.content}}</p> 
+       </li>
+
+    </ul>
 
     <div class="commentBox">
       <div class="content">
@@ -14,17 +23,18 @@
       </div>
     </div>
 
-    <div class="otherComments" 
-   >
-      <img />
-      <p></p>
-    </div>
+  
   </div>
 </template>
 
 <script>
 export default {
- 
+ props:{
+   comment:{
+     type:Object,
+     required:true
+   }
+ }
   
 };
 </script>
@@ -42,6 +52,15 @@ export default {
     line-height: 5vh;
     padding-left: 10px;
     font-size: 0.8rem;
+  }
+  li{
+    img{
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+    display: flex;
+    align-items: center
   }
   .commentBox {
     padding: 10px;
@@ -73,18 +92,6 @@ export default {
     }
   }
 }
-.otherComments {
-  display: flex;
-  margin: 10px;
-  img {
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-  }
-  p {
-    display: flex;
-    align-items: center;
-  }
-}
+
 </style>
 

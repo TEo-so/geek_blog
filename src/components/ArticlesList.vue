@@ -1,33 +1,33 @@
 <template>
   <div class="articleList">
-    <div
-      class="article"
-      ref="article"
-      v-for="(item) in articleList"
-      :key="item.id"
-    >
+    <div class="article" ref="article" v-for="(item) in articleList" :key="item.id">
+
       <div class="top">
+
         <h4 class="title">{{item.title}}</h4>
+    
+
         <el-dropdown>
           <span class="el-dropdown-link">
             <i class="el-icon-arrow-down el-icon--right"></i>更多
           </span>
-
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>删除文章</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
 
-      <div class="content">{{item.content}}</div>
+     
+      <div 
+      class="content"
+      @click = "toDetail(item.id)"
+      >{{item.content}}</div>
+     
 
       <div class="end">
         <span class="tag">{{item.tag}}</span>
         <span class="el-icon-medal-1">点赞</span>
-       
       </div>
-
-      
     </div>
   </div>
 </template>
@@ -35,27 +35,26 @@
 
 
 <script>
-
-
-
 import { mapGetters } from "vuex";
 
 export default {
   name: "ArticlesList",
- 
+
   props: {
     articleList: {
       type: Array,
       required: true
     }
   },
-  
+
   computed: {
-    ...mapGetters(["commentList"]),
-   
+    ...mapGetters(["commentList"])
   },
-  
-  
+  methods:{
+    toDetail(id){
+      this.$router.push({ name: 'article', query: {articleId:id}})
+    }
+  }
 };
 </script>
 

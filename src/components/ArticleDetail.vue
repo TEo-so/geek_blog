@@ -4,36 +4,39 @@
     <More />
 
     <div class="top">
-      <h4 class="title">{{article.title}}</h4>
+      <h4 class="title"></h4>
     </div>
 
-    <div class="content">{{article.content}}</div>
-    <CommentBox/>
+    <div class="content"></div>
+    <CommentBox :comment = "comment"/>
 
   </div>
 </template>
 
 
 <script>
-import Author from "@/components/Author";
-import More from "@/components/More";
+import Author from "@/components/Author"
+import More from "@/components/More"
 import CommentBox from '@/components/CommentBox'
+import {FETCH_ARTICLE_DETAIL} from '@/store/type/actions'
+import { mapGetters } from 'vuex'
+
 
 export default {
-  data() {
-    return {
-      article: {
-        title: "html",
-        content: "超强本语言",
-        tag: "html"
-      }
-    };
-  },
   components: {
     Author,
     More,
     CommentBox
+  },
+  created(){
+     this.$store.dispatch(FETCH_ARTICLE_DETAIL,this.$route.query.articleId)
+     console.log(this.articleDetail)
+   },
+    computed:{
+      ...mapGetters(['comment'])
   }
+
+
 };
 </script>
 

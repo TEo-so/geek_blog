@@ -10,13 +10,13 @@ module.exports = {
     //article
     app.get('/api/article', (req, res) => {
       res.json(article)
-    })
+    }) 
     //tag
     app.get('/api/tag', (req, res) => {
       res.json(tag)
     })
     //comment
-    app.get('/api/comment', (req, res) => {
+    app.get('/api/comment/*', (req, res) => {
       res.json(comment)
     })
     //login

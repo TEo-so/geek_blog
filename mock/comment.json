@@ -1,4 +1,4 @@
-[
+
   {
     "articleId": 0,
     "content": [
@@ -21,74 +21,6 @@
         "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
       }
     ]
-  },
-  {
-    "articleId": 1,
-    "content": [
-      {
-        "id": 0,
-        "content": "我太难了",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      },
-      {
-        "id": 1,
-        "content": "我太难了",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      },
-      {
-        "id": 2,
-        "content": "我太难了",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      }
-    ]
-  },
-  {
-    "articleId": 2,
-    "content": [
-      {
-        "id": 0,
-        "content": "我太难了1",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      },
-      {
-        "id": 1,
-        "content": "我太难了1",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      },
-      {
-        "id": 2,
-        "content": "我太难了1",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      }
-    ]
-  },
-  {
-    "articleId": 3,
-    "content": [
-      {
-        "id": 0,
-        "content": "我太难了",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      },
-      {
-        "id": 1,
-        "content": "我太难了",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      },
-      {
-        "id": 2,
-        "content": "我太难了",
-        "name": "菜鸡1号",
-        "avator": "https://cdn.v2ex.com/gravatar/b0c30f91732cc5307a1cdcfa4d58cb19?s=48&d=retro"
-      }
-    ]
   }
-]
+
+  
